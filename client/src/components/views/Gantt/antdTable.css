@@ -1,0 +1,23 @@
+/* table */
+.ant-table {
+    font-size: 12px;
+  }
+  
+  /* row data */
+  .ant-table-tbody > tr > td {
+    height: 38px;
+    padding: 0px !important;
+  }
+  /* row tags */
+  .my-tag {
+    font-size: 12px;
+  }
+  .ant-table-thead > tr > th {
+    height: 60px;
+    padding: 0px;
+  }
+
+  .today-highlight{
+    fill:red!important;
+  }
+  
