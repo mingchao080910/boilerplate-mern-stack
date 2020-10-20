@@ -10,13 +10,13 @@ function GanttSvg(props) {
   const [View, setView] = useState("Month");
   const [Update, setUpdate] = useState(0);
   const [gantt, setGantt] = useState(undefined);
-  const gantt_config = { custom_popup_html: (task) => returnGanttHtml(task),view_mode:'Month' };
+  const gantt_config = { custom_popup_html: (task) => returnGanttHtml(task), view_mode: 'Month' };
 
   const ganttViewChange = (event) => {
     let view = event.target.value;
     setView(view);
     gantt.change_view_mode(view);
-    tasks && changeBarColor(tasks); 
+    tasks && changeBarColor(tasks);
   };
 
   //组件初始化后,svg设置为gantt组件
@@ -85,7 +85,8 @@ function changeBarColor(data) {
     let node = document.querySelector(`g[data-id*="${d.name}_"] .bar-progress`);
 
     node.style.fill = d.categoryID ? d.categoryID.Color : "#8a8aff";
-    node.style.opacity = 0.8;
+    node.style.opacity = 1;
+    node.style.width = 5;
   });
 }
 export default GanttSvg;
